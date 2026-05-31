@@ -1,70 +1,123 @@
-# Getting Started with Create React App
+# 🏥 Hospital Management System - Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern **React.js** frontend for the Hospital Management System with Role-Based Dashboards for Admin, Doctor, and Patient.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Tech Stack
 
-### `npm start`
+| Technology | Version |
+|------------|---------|
+| React.js | 18+ |
+| React Router DOM | v6 |
+| Axios | Latest |
+| React Toastify | Latest |
+| Context API | Built-in |
+| CSS | Custom Styles |
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## ✨ Features
 
-### `npm test`
+- ✅ JWT Token Based Authentication
+- ✅ Role Based Dashboards (ADMIN / DOCTOR / PATIENT)
+- ✅ Book & Manage Appointments
+- ✅ View Medical Records
+- ✅ Doctor Listing
+- ✅ Protected Routes
+- ✅ Toast Notifications
+- ✅ Responsive Design
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 📁 Project Structure
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+src/
+├── context/
+│   └── AuthContext.jsx        # Global Auth State
+├── pages/
+│   ├── auth/
+│   │   ├── Login.jsx
+│   │   └── Register.jsx
+│   ├── admin/
+│   │   └── AdminDashboard.jsx
+│   ├── doctor/
+│   │   └── DoctorDashboard.jsx
+│   └── patient/
+│       └── PatientDashboard.jsx
+├── services/
+│   └── api.js                 # Axios Configuration
+├── App.js
+└── index.js
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## ⚙️ Setup & Installation
 
-### `npm run eject`
+### Prerequisites
+- Node.js 18+
+- npm
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Steps
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**1. Clone the repository**
+```bash
+git clone https://github.com/sanket9322/hospital-management-frontend.git
+cd hospital-management-frontend
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+**2. Install dependencies**
+```bash
+npm install
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+**3. Configure API URL**
 
-## Learn More
+In `src/services/api.js`:
+```js
+const API = axios.create({
+  baseURL: 'http://localhost:8080/api',
+});
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+**4. Run the application**
+```bash
+npm start
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Frontend runs on: `http://localhost:3000`
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 🔐 Default Login Credentials
 
-### Analyzing the Bundle Size
+| Role | Email | Password |
+|------|-------|----------|
+| Admin | admin@gmail.com | admin123 |
+| Doctor | doctor@gmail.com | admin123 |
+| Patient | patient@gmail.com | admin123 |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## 📌 Role Based Access
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+| Role | Dashboard | Features |
+|------|-----------|----------|
+| ADMIN | `/admin` | Manage Doctors, Patients, Appointments |
+| DOCTOR | `/doctor` | View Appointments, Add Medical Records |
+| PATIENT | `/patient` | Book Appointments, View Records, View Doctors |
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 🔗 Backend Repository
 
-### Deployment
+👉 [hospital-management-backend](https://github.com/sanket9322/hospital-management-backend)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+## 👨‍💻 Author
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Sanket** — Full Stack Java Developer  
+🔗 [GitHub](https://github.com/sanket9322) | [LinkedIn](https://linkedin.com/in/sanket9322)
